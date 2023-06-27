@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class ListUtilTest {
 
@@ -24,6 +25,9 @@ public class ListUtilTest {
     output = ListUtil.chunk(input, 100);
     assertEquals(1, output.size());
     assertEquals(input, output.get(0));
+
+
+    fail();
   }
 
   @Test

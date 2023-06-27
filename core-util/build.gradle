@@ -23,6 +23,13 @@ protobuf {
     }
 }
 
+tasks.withType(Test).configureEach {
+    retry {
+        maxRetries.set(3)
+        failOnPassedAfterRetry.set(true)
+    }
+}
+
 dependencies {
     implementation libs.google.protobuf.javalite
     implementation libs.androidx.sqlite

@@ -9,6 +9,7 @@ import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.fail;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = Config.NONE, application = Application.class)
@@ -22,6 +23,7 @@ public class WifiDirectTest {
 
     String extractedExtraInfo = WifiDirect.isInstanceNameMatching(instanceName);
     assertEquals(extractedExtraInfo, "knownothing");
+    fail();
   }
 
   @Test

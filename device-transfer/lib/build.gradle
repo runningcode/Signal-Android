@@ -6,6 +6,13 @@ android {
     namespace 'org.signal.devicetransfer'
 }
 
+tasks.withType(Test).configureEach {
+    retry {
+        maxRetries.set(3)
+        failOnPassedAfterRetry.set(true)
+    }
+}
+
 dependencies {
     implementation project(':core-util')
     implementation libs.libsignal.android
